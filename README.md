@@ -1,7 +1,8 @@
 McNichols_CSCI2270_FinalProject
 Repository for final project
 ==============================
-Collaborators:  Matt McNichols
+
+Project Summary
 ------------------------------
 
 For my final project I plan on making a task manager.  This will be a program 
@@ -20,3 +21,31 @@ items either alphabetically, by due date, or by priority. these print functions
 will only print items that have not been completed. There will also be an option
 to print all the items in the task manager along with an indicator showing which
 items have been completed and which have not. 
+
+How to Run
+----------------------------
+download the zip file 
+decompress and save to a seperate folder
+
+Dependencies
+----------------------------
+I am not entirely sure how to make the system recognize the date.  
+There may be a library that must be installed for this operation.
+
+System Requirements
+----------------------------
+This program will be intended for use on linux devices.
+
+Group Members
+---------------------------
+Matt McNichols
+
+Contributors
+----------------------------
+Matt Arendall
+Dylan Van de Kerkhove
+
+Open Issues/Bugs
+----------------------------
+
+
