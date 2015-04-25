@@ -215,7 +215,7 @@ the items in the new order.
 void ToDo :: PrintPriority()
 {
   int i,j;
-  cout<<todoList.size()<<endl;
+ 
   for(i= (todoList.size()-1); i>0; --i)
     {
       for(j=0; j<i; j++)
@@ -228,7 +228,7 @@ void ToDo :: PrintPriority()
 	    }
 	}
     }
-  cout<<"finished sort"<<endl;
+ 
 vector<item>::iterator myIntVectorIterator;
 for(myIntVectorIterator = todoList.begin(); myIntVectorIterator != todoList.end();myIntVectorIterator++)
   {
