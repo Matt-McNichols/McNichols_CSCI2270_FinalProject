@@ -1,0 +1,176 @@
+public functions of ToDo class:
+
+
+void readIn();
+Expected inputs:
+There are no expected inputs for this function.
+
+Preconditions:
+The funtion opens the ToDoList.txt file and reads each item from the file. The 
+file must be in the exact form as the function readOut uses.  It is best if the 
+user does not make changes to the text file directly.  
+
+Expected outputs:
+The function has no expected outputs. The purpose of the function is to read in
+items from the text file and storing them in the todoList vector. The todoList 
+vector is a private object that can only be touched in the ToDo.cpp file.
+
+Post conditions
+If the ToDoList.txt file is empty then this function makes no changes. If there
+are items in the text file, they will be stored in the vector. At the end of the
+function the text file is closed. No changes are made in the text file.
+
+
+void readOut();
+Expected inputs:
+Preconditions:
+The Item vector is either empty or contains a objects of type item.
+The user has entered valid inputs for the item components.
+
+Expected outputs:
+The function will write each item in the vector to the text file. If the vector
+does not contain any items then the text file will remain empty.
+
+Post conditions:
+Each item from the todoList vector has been written to the 
+ToDoList.txt file in the same odder they appear in the vector
+
+
+void addItem(std::string name, int priority, std::string date);
+Expected inputs:
+The function has three arguements. A string for the name of the item, an int
+for the priority level and another string containing the date. 
+
+Preconditions:
+The user must type valid inputs for name, priority and date. The 
+date must be in the specified order and include the '/' in the 
+correct locations.
+
+Expected outputs:
+There are no expected outputs. 
+
+Post conditions:
+The inputs given by the user are stored into a new item and the item
+is pushed onto the todoList vector.
+        
+
+void displayALL();
+Expected inputs:
+There are no expected inputs
+Preconditions:
+This method assumes there are items in the vector. If there are no 
+items in the vector, this method simply returns and does not output 
+anything.
+
+Expected outputs:
+using the same format as read out, this function displays all of the items in 
+the todoList vector.
+Post conditions:
+This method will output the items in the vector in the order the 
+items appear in the vector. It will output all the information for
+each item. The output is of the same format as the output used when
+writing to the ToDoList.txt file. 
+	
+
+void PrintPriority();
+Expected inputs:
+There are no expected inputs
+Preconditions:
+This method assumes there are Items in the todoList vector. Also 
+the method assumes the user entered a valid input for the priority
+value of each item.
+
+Expected outputs:
+The items in the vector are re-arranged and then printed in order of priority.
+Only the priority level and the item name are displayed.
+
+Post conditions:
+The todoList vector order has been changed. The highest priority 
+item is first in the vector and lowest is last. The method prints 
+the items in the new order.
+	
+
+void PrintDate();
+Expected inputs:
+There are no expected inputs.
+
+Preconditions:
+This method assumes there are Items in the todoList vector. Also 
+the method assumes the user entered a valid input for the date
+value of each item.  There is a prototype date value printed when 
+the program asks the user to enter the date.
+
+Expected outputs:
+The function re-orders the vector based on the due date.
+
+Post conditions:
+The todoList vector order has been changed. The earliest due
+date item is now first in the vector while the latest due date
+item is last. The method prints the items in the new order.
+	
+
+void taskComplete(std::string task);
+Expected inputs:
+The function expects a string that 
+Preconditions:
+The method searches the vector and if the string matches an item
+name the item is erased from the vector. If the string does not
+match any item names the the function tells the user the item was
+not found and returns.
+
+Expected outputs:
+There are no expected outputs for this function. 
+Post conditions:
+If an item is found,the vector is re-sized and all other items are 
+shifted appropriately.
+	
+
+void PrintDueToday();
+Expected inputs:
+There are no expected inputs
+
+Preconditions:
+This method assumes the vector is not empty and that items contain
+valid inputs. 
+
+Expected outputs:
+The function prints all the items in the todoList vector whos date matches
+the current date.
+
+Post conditions:
+The function prints the items that are due today but makes no change
+the the todoList vector
+	
+
+void PrintDueMonth();
+Expected inputs:
+There are no expected inputs
+
+Preconditions:
+This method assumes the vector is not empty and that items contain
+valid inputs. 
+
+Expected outputs:
+The function prints all items that have the same due date month as the current
+month. Only items from the current year will be printed.
+
+Post conditions:
+The function prints the items that are due this month but makes no
+change the the todoList vector.
+	
+
+void clearAll();
+Expected inputs:
+There are no expected inputs.
+
+Preconditions:
+This Function assumes there are items in the vector although if the
+vector is empty, calling this method will not change the vector.
+
+Expected outputs:
+There are no expected outputs
+
+Post conditions:
+The vector is completely empty. All items have been freed. If the 
+user ends the program after this method, the ToDoList.txt file will
+be empty.
