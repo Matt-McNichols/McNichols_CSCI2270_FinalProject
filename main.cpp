@@ -53,13 +53,34 @@ int main()
 	    string date;
 	    int priority=0;
 	    cout << "Enter Item Name:" << endl;
-	    getline(cin,name);
+	    while(1)
+	      {
+		getline(cin,name);
+		if(name.empty())
+		  {
+		    cout<<"You did not enter a name"<<endl;
+		    cout << "Enter Item Name:" << endl;
+		  }
+		else break;
+	      }
+		  
 	    cout << "Enter Priority:" << endl;
 	    getline(cin,Spriority);
 	    priority=atoi(Spriority.c_str());
 	    cout << "Enter Due Date(MM/DD/YYYY):" << endl;
 	    getline(cin,date);
-	    T.addItem(name,priority,date);
+	    while(1){
+			if(date.size()!=10)
+			  {
+				cout<<"invalid date"<<endl;
+				cout << "Enter Due Date(MM/DD/YYYY):" << endl;
+				getline(cin,date);
+			  }
+		    else
+				break;
+		}
+		T.addItem(name,priority,date);
+			
 	  }
 	  break;
 	  // print all
